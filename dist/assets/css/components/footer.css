@@ -1,0 +1,29 @@
+.footer {
+  padding: 0.5rem 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  gap: 1rem;
+}
+
+.footer p {
+  font-size: 0.8rem;
+  color: var(--black);
+}
+
+.footer i {
+  margin-left: 0.2rem;
+  color: var(--black);
+}
+
+.footer i:hover {
+  color: var(--teal);
+}
+
+.footer a:link,
+.footer a:visited,
+.footer a:active {
+  text-decoration: none;
+  color: inherit;
+}

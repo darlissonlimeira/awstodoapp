@@ -1,0 +1,21 @@
+.logo {
+  position: relative;
+  display: flex;
+  animation: fade-in 0.3s ease-in;
+  margin: auto;
+  height: 100%;
+  background-color: var(--snow) !important;
+  color: #444444;
+}
+
+.fa-sticky-note {
+  color: #444444;
+  font-size: 1.8rem !important;
+}
+
+.fa-pencil-alt {
+  color: #444444;
+  position: absolute;
+  left: 0.5rem;
+  top: -0.4rem;
+}

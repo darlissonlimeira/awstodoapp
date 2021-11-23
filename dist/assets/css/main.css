@@ -1,0 +1,226 @@
+@import './vendors/reset.css';
+@import './base.css';
+
+/* Logo */
+@import './components/logo.css';
+
+/* Header */
+@import './components/header.css';
+@import './components/header-menu.css';
+@import './components/search-box.css';
+
+/* Footer */
+@import './components/footer.css';
+
+/* Radio Input View */
+@import './components/radio-input.css';
+@import './components/radio-priority.css';
+
+/* Todo Item */
+@import './components/todo-item.css';
+
+/* Project Item  */
+@import './components/project-item.css';
+
+/* Create Project form */
+@import './components/create-project-form.css';
+
+/* Create Todo form */
+@import './components/create-todo-form.css';
+
+/* Pages */
+@import './pages/home.css';
+@import './pages/project-page.css';
+
+/* Shared */
+.main {
+  padding: 1rem 1rem;
+  margin-top: 4.5rem;
+  min-height: 80vh;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+.page {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  animation: fade-in 0.4s ease-out;
+}
+
+.header-after::after {
+  content: '';
+  width: 1rem;
+}
+
+.title-page {
+  flex: 1;
+  text-align: center;
+  font-size: 1.3rem;
+}
+
+.list-title {
+  display: block;
+  font-size: 1.5rem;
+  font-weight: 500;
+  margin-bottom: 1.5rem;
+}
+
+.base-create-btn {
+  font-size: 2rem;
+  box-shadow: 0px 0px 5px 1px rgba(0, 0, 0, 0.3);
+  background-color: var(--teal);
+  color: var(--black);
+  width: 5rem;
+  height: 5rem;
+  z-index: 9999;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  position: fixed;
+  bottom: 2rem;
+  right: 1.5rem;
+  display: flex;
+}
+
+.default-message {
+  margin-top: 10%;
+  text-align: center;
+  font-size: 1rem;
+  font-weight: 400;
+  animation: fade-in 0.3s linear;
+}
+
+.base-input {
+  font-family: inherit;
+  border: none;
+  outline: transparent;
+  border-bottom: 2px solid var(--dark-gray);
+  padding: 0.5rem;
+  border-radius: 5px 5px 0 0;
+  transition: all 0.2s;
+  line-height: 140%;
+  background-color: var(--cold);
+  font-size: 0.9rem;
+}
+
+.base-input:focus {
+  border-bottom: 2px solid var(--teal);
+}
+
+.base-input-btn {
+  padding: 1rem;
+  border-radius: 5px;
+  font-size: 1.2rem;
+  color: var(--snow);
+  margin-top: 1rem;
+  background-color: var(--black);
+}
+
+.search-message {
+  width: 100%;
+  text-align: center;
+  font-size: 1rem;
+  line-height: 140%;
+}
+
+/* Project edit */
+.close-button-edit-page {
+  position: fixed;
+  left: 1rem;
+  top: 0.5rem;
+  font-size: 2rem;
+  background: none;
+}
+
+/* First Home  */
+.first-home {
+  display: flex;
+  height: 100vh;
+  width: 100%;
+}
+
+.main-first-home {
+  margin: 0;
+  flex: 1;
+  gap: 1rem;
+  padding-left: 2rem;
+  justify-content: center;
+  background: url('./images/undraw_next_tasks.svg'),
+    url('./images/undraw_complete_task.svg');
+  background-repeat: no-repeat;
+  background-size: 250px, 300px;
+  background-position: left 34rem, right 10%;
+}
+
+.title-first-home {
+  font-weight: 400;
+  font-size: 2.5rem;
+  line-height: 145%;
+  width: 250px;
+}
+
+.home-btn {
+  font-size: 1rem;
+  background-color: var(--black);
+  color: var(--snow);
+  width: 200px;
+  padding: 1rem;
+  z-index: 9999;
+  align-items: center;
+  justify-content: center;
+  border-radius: 5px;
+}
+
+/* Animations */
+@keyframes fade-in {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 0.5;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes slide-right {
+  0% {
+    transform: translate(-100%);
+    opacity: 0;
+  }
+  50% {
+    transform: translate(-50%);
+    opacity: 0.5;
+  }
+  100% {
+    transform: translate(0);
+    opacity: 1;
+  }
+}
+
+@keyframes slide-left {
+  0% {
+    transform: translate(100%);
+    opacity: 0;
+  }
+  50% {
+    transform: translate(50%);
+    opacity: 0.5;
+  }
+  100% {
+    transform: translate(0);
+    opacity: 1;
+  }
+}
+
+@keyframes fade-in {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}

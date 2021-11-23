@@ -1,0 +1,144 @@
+.todo-item * {
+  font-size: 0.9rem;
+}
+
+.todo-item {
+  background-color: var(--black);
+  border-radius: 5px;
+  display: flex;
+  width: 100%;
+  overflow: hidden;
+  max-height: 52px;
+}
+
+.todo-wrapper {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 100%;
+}
+
+.todo-min-content {
+  display: grid;
+  width: 100%;
+  grid-template-columns: 45px 1fr 45px;
+  grid-template-rows: minmax(45px);
+}
+
+.todo-content {
+  display: flex;
+  padding: 0.7rem;
+  flex-wrap: wrap;
+  width: 100%;
+  gap: 1rem;
+}
+
+.toggle-content {
+  max-height: fit-content;
+}
+
+.todo-title {
+  color: var(--snow);
+  padding: 1.2rem 0;
+  align-self: flex-start;
+}
+
+.toggle-task-title {
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+.todo-btn-detail {
+  background: none;
+  width: fit-content;
+  justify-self: right;
+  align-self: start;
+  padding: 0.8rem;
+}
+
+.check-box {
+  position: relative;
+  align-self: flex-start;
+  padding: 0.9rem 0.7rem;
+}
+
+.check-mark,
+.check-circle {
+  color: var(--vivid-yellow);
+  position: absolute;
+  font-size: 1.4rem;
+}
+
+.check-mark {
+  transform: scale(0);
+  z-index: 2;
+}
+
+.todo-checkbox {
+  position: absolute;
+  z-index: 999;
+  width: 20px;
+  height: 20px;
+  opacity: 0;
+}
+
+.todo-checkbox:checked + .check-mark {
+  transform: scale(1);
+}
+
+.todo-icon-detail {
+  font-size: 1.5rem;
+  color: var(--vivid-yellow);
+}
+
+.todo-due-date,
+.todo-priority {
+  color: var(--black);
+  font-weight: 600;
+  border-radius: 3px;
+  font-size: 90%;
+  background-color: var(--teal);
+  padding: 0.3rem 0.5rem;
+  text-transform: capitalize;
+}
+
+.todo-priority {
+  text-align: end;
+  order: -1;
+}
+
+.todo-notes {
+  width: 100%;
+  margin-top: 0.5rem;
+  color: var(--snow);
+}
+
+.todo-buttons {
+  display: flex;
+  gap: 2rem;
+  align-self: flex-end;
+  padding: 1rem;
+}
+
+.todo-buttons button {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  background: none;
+  font-size: 0.9rem;
+  color: var(--snow);
+  margin-top: 1rem;
+  opacity: 0.5;
+  transition: all 0.3s;
+}
+
+.todo-buttons button:hover {
+  opacity: 1;
+}
+
+.todo-buttons .fa-pen,
+.todo-buttons .fa-trash {
+  color: var(--snow) !important;
+  order: -1;
+}
