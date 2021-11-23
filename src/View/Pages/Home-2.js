@@ -1,14 +1,9 @@
-// const Footer = require('../Components/Footer');
-// const createElement = require('../helpers/createElement');
-// const renderView = require('../helpers/renderView');
-// const Home = require('./Home');
+const Footer = require('../Components/Footer');
+const createElement = require('../helpers/createElement');
+const renderView = require('../helpers/renderView');
+const Home = require('./Home');
 
 function Home2() {
-  const Footer = require('../Components/Footer');
-  const createElement = require('../helpers/createElement');
-  const renderView = require('../helpers/renderView');
-  const Home = require('./Home');
-
   const page = createElement('div');
   page.className = 'page first-home';
 

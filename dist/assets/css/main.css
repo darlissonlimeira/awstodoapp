@@ -102,7 +102,7 @@
   transition: all 0.2s;
   line-height: 140%;
   background-color: var(--cold);
-  font-size: 0.9rem;
+  font-size: 1rem;
 }
 
 .base-input:focus {

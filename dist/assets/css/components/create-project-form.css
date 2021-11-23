@@ -1,5 +1,5 @@
 .create-project-form * {
-  font-size: 0.9rem;
+  font-size: 1rem;
 }
 
 .create-project-form {
@@ -22,12 +22,3 @@
 .form-description-project {
   resize: none;
 }
-
-/* .form-submit-project {
-  padding: 1rem;
-  border-radius: 5px;
-  font-size: 1.2rem;
-  color: var(--snow);
-  margin-top: 1rem;
-  background-color: var(--black) !important;
-} */
