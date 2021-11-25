@@ -3,7 +3,7 @@ const createElement = require('../helpers/createElement');
 const renderView = require('../helpers/renderView');
 const Home = require('./Home');
 
-function Home2() {
+function FirstPage() {
   const page = createElement('div');
   page.className = 'page first-home';
 
@@ -31,4 +31,4 @@ function Home2() {
   return page;
 }
 
-module.exports = Home2;
+module.exports = FirstPage;

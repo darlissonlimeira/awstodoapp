@@ -8,7 +8,7 @@ const TodoList = require('../Components/TodoList');
 const RadioInput = require('../Components/RadioIInput');
 const SearchBar = require('../Components/SearchBar');
 const ProjectList = require('../Components/ProjectList');
-const Footer = require('../Components/Footer');
+const Logo = require('../Components/Logo');
 
 // Controllers
 const TaskController = require('../../Controller/TaskController');
@@ -16,7 +16,6 @@ const ProjectController = require('../../Controller/ProjectController');
 
 // Views
 const CreateProjectView = require('./CreateProject');
-const Logo = require('../Components/Logo');
 
 function Home(op) {
   const taskController = new TaskController();
@@ -25,7 +24,7 @@ function Home(op) {
   const tasks = TodoList(taskController.getTasks());
 
   //Views
-  const Home2 = require('./Home-2');
+  const FirstPage = require('./FirstPage');
 
   // Page
   const logo = Logo();
@@ -124,7 +123,7 @@ function Home(op) {
   });
 
   logo.addEventListener('click', () => {
-    renderView(Home2);
+    renderView(FirstPage);
   });
 
   return page;

@@ -1,6 +1,6 @@
 # AWS Todo App
 
-- url
+- https://awstodoapp.netlify.app
 
 # This is a todo app for Odin Project.
 

@@ -1,10 +1,10 @@
 const Home = require('./View/Pages/Home');
-const Home2 = require('./View/Pages/Home-2');
+const FirstPage = require('./View/Pages/FirstPage');
 
 const app = document.querySelector('#app');
 
 if (localStorage.getItem('awstodoDB')) {
   app.append(Home());
 } else {
-  app.append(Home2());
+  app.append(FirstPage());
 }
