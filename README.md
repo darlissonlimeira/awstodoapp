@@ -2,7 +2,7 @@
 
 - https://awstodoapp.netlify.app
 
-# This is a todo app for Odin Project.
+## This is a todo app for Odin Project.
 
 - The goal was to build all pages using javascript and use localstorage to save the data.
 
