@@ -3,17 +3,18 @@
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
-    "start": "clear && npx webpack-cli --watch"
+    "dev": "npx webpack-cli --watch",
+    "start": "live-server --open=\"./dist/index.html\""
   },
   "author": "",
   "license": "ISC",
   "description": "",
   "devDependencies": {
-    "@babel/core": "^7.15.8",
-    "@babel/preset-env": "^7.15.8",
+    "@babel/core": "^7.17.5",
+    "@babel/preset-env": "^7.16.11",
     "babel-loader": "^8.2.3",
-    "webpack": "^5.59.1",
-    "webpack-cli": "^4.9.0"
+    "webpack": "^5.70.0",
+    "webpack-cli": "^4.9.2"
   },
   "dependencies": {
     "uuid": "^8.3.2"

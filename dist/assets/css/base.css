@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap");
 
 :root {
   --vivid-yellow: #ffd803;
@@ -18,7 +18,7 @@
 }
 
 html {
-  font-family: 'Poppins', sans-serif;
+  font-family: "Poppins", sans-serif;
 }
 
 body {
@@ -26,6 +26,7 @@ body {
   background-color: var(--snow);
   max-width: 700px;
   margin: 0 auto;
+  font-size: 1.25rem;
 }
 
 h1 {
@@ -47,13 +48,13 @@ p {
 }
 
 button,
-input[type='submit'] {
+input[type="submit"] {
   border: none;
   cursor: pointer;
-  font-family: 'Poppins', sans-serif;
-  font-weight: 500;
+  font-family: "Poppins", sans-serif;
+  background: none;
 }
 
-input[type='radio']:hover {
+input[type="radio"]:hover {
   cursor: pointer;
 }
