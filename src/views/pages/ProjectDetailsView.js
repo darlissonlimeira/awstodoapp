@@ -1,73 +1,73 @@
-const { viewRender } = require("../../helpers/viewRender");
-const { TaskItem } = require("../components/TaskItem");
-const { TaskModal } = require("../components/TaskModal");
-const { ProjectDetails } = require("./ProjectDetails");
+const { viewRender } = require('../../helpers/viewRender')
+const { TaskItem } = require('../components/TaskItem')
+const { TaskModal } = require('../components/TaskModal')
+const { ProjectDetails } = require('./ProjectDetails')
 
 const createTaskElement = (item) => {
-  const taskElement = TaskItem(item);
-  taskElement.id = item.id;
+    const taskElement = TaskItem(item)
+    taskElement.id = item.id
 
-  window.onclick = function (event) {
-    const page = document.querySelector(".page");
-    const modal = page.querySelector(".task-modal");
-    if (event.target == modal) {
-      page.removeChild(modal);
+    window.onclick = function (event) {
+        const page = document.querySelector('.page')
+        const modal = page.querySelector('.task-modal')
+        if (event.target == modal) {
+            page.removeChild(modal)
+        }
     }
-  };
 
-  return taskElement;
-};
+    return taskElement
+}
 
 const projectDetailsView = (project, tasks) => {
-  const view = ProjectDetails();
-  const taskModal = TaskModal();
-  view.appendChild(taskModal);
-  viewRender(view);
+    const view = ProjectDetails()
+    const taskModal = TaskModal()
+    view.appendChild(taskModal)
+    viewRender(view)
 
-  const dataListEl = document.querySelector("#data-list");
-  dataListEl.innerHTML = "";
+    const dataListEl = document.querySelector('#data-list')
+    dataListEl.innerHTML = ''
 
-  const cardProjectTitleEl = document.querySelector("#project-card-title");
-  const cardProjectDescEl = document.querySelector("#project-card-desc");
-  const formDeleteProject = document.querySelector("#form-project-delete");
-  const createTaskBtn = document.querySelector("#add-item-btn");
-  const projectCard = document.querySelector("#project-data");
+    const cardProjectTitleEl = document.querySelector('#project-card-title')
+    const cardProjectDescEl = document.querySelector('#project-card-desc')
+    const formDeleteProject = document.querySelector('#form-project-delete')
+    const createTaskBtn = document.querySelector('#add-item-btn')
+    const projectCard = document.querySelector('#project-data')
 
-  cardProjectTitleEl.textContent = project.title;
-  cardProjectDescEl.textContent = project.description;
+    cardProjectTitleEl.textContent = project.title
+    cardProjectDescEl.textContent = project.description
 
-  const tasksElements = tasks.map((task) => {
-    const taskElement = createTaskElement(task);
-    taskElement["data-task-id"] = task.id;
+    const tasksElements = tasks.map((task) => {
+        const taskElement = createTaskElement(task)
+        taskElement.dataset.taskId = task.id
 
-    return taskElement;
-  });
+        return taskElement
+    })
 
-  dataListEl.append(...tasksElements);
+    dataListEl.append(...tasksElements)
 
-  const tasksTitle = tasksElements.map((el) => {
-    const titleEl = el.querySelector(".data-item__title");
-    titleEl["data-task-id"] = el["data-task-id"];
+    const tasksTitle = tasksElements.map((el) => {
+        const titleEl = el.querySelector('.data-item__title')
+        titleEl.dataset.taskId = el.dataset.taskId
 
-    return titleEl;
-  });
+        return titleEl
+    })
 
-  const tasksCheckBox = tasksElements.map((el) => {
-    const checkBoxEl = el.querySelector(".check-form");
-    checkBoxEl["data-task-id"] = el["data-task-id"];
+    const tasksCheckBox = tasksElements.map((el) => {
+        const checkBoxEl = el.querySelector('.check-form')
+        checkBoxEl.dataset.taskId = el.dataset.taskId
 
-    return checkBoxEl;
-  });
+        return checkBoxEl
+    })
 
-  return {
-    projectCard,
-    formDeleteProject,
-    createTaskBtn,
-    tasksTitle,
-    tasksCheckBox,
-  };
-};
+    return {
+        projectCard,
+        formDeleteProject,
+        createTaskBtn,
+        tasksTitle,
+        tasksCheckBox,
+    }
+}
 
 module.exports = {
-  projectDetailsView,
-};
+    projectDetailsView,
+}

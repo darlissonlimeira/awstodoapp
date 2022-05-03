@@ -1,68 +1,68 @@
-const { viewRender } = require("../../helpers/viewRender");
-const { ProjectItem } = require("../components/ProjectItem");
-const { Home } = require("./Home");
+const { viewRender } = require('../../helpers/viewRender')
+const { ProjectItem } = require('../components/ProjectItem')
+const { Home } = require('./Home')
 
 function projectsView(projects) {
-  const view = Home("Projects");
-  viewRender(view);
+    const view = Home('Projects')
+    viewRender(view)
 
-  const dataListEl = document.querySelector("#data-list");
-  dataListEl.classList.add("projects");
-  dataListEl.innerHTML = "";
+    const dataListEl = document.querySelector('#data-list')
+    dataListEl.classList.add('projects')
+    dataListEl.innerHTML = ''
 
-  const projectElements = [];
+    const projectElements = []
 
-  if (projects.length > 0) {
-    for (const project of projects) {
-      const projectElement = ProjectItem(project);
-      projectElement["data-project-id"] = project.id;
-      projectElements.push(projectElement);
+    if (projects.length > 0) {
+        for (const project of projects) {
+            const projectElement = ProjectItem(project)
+            projectElement.dataset.projectId = project.id
+            projectElements.push(projectElement)
+        }
     }
-  }
 
-  dataListEl.append(...projectElements);
+    dataListEl.append(...projectElements)
 
-  const addProjectBtn = document.querySelector("#new-item-btn");
+    const addProjectBtn = document.querySelector('#new-item-btn')
 
-  const { menuTasksBtn, menuProjectsBtn } = navHandlers();
+    const { menuTasksBtn, menuProjectsBtn } = navHandlers()
 
-  setMenuHandlers();
+    setMenuHandlers()
 
-  const elements = {
-    addProjectBtn,
-    projectElements,
-    menuProjectsBtn,
-    menuTasksBtn,
-  };
+    const elements = {
+        addProjectBtn,
+        projectElements,
+        menuProjectsBtn,
+        menuTasksBtn,
+    }
 
-  return elements;
+    return elements
 }
 
 function setMenuHandlers() {
-  const openMenuBtn = document.querySelector("#toggle-menu");
-  const closeMenuBtn = document.querySelector("#close-nav-menu");
+    const openMenuBtn = document.querySelector('#toggle-menu')
+    const closeMenuBtn = document.querySelector('#close-nav-menu')
 
-  openMenuBtn.onclick = () => {
-    const nav = document.querySelector("#menu-app");
-    nav.classList.toggle("toggle-menu");
-  };
+    openMenuBtn.onclick = () => {
+        const nav = document.querySelector('#menu-app')
+        nav.classList.toggle('toggle-menu')
+    }
 
-  closeMenuBtn.onclick = () => {
-    const nav = document.querySelector("#menu-app");
-    nav.classList.toggle("toggle-menu");
-  };
+    closeMenuBtn.onclick = () => {
+        const nav = document.querySelector('#menu-app')
+        nav.classList.toggle('toggle-menu')
+    }
 }
 
 function navHandlers() {
-  const menuTasksBtn = document.querySelector("#menu-btn-tasks");
-  const menuProjectsBtn = document.querySelector("#menu-btn-projects");
+    const menuTasksBtn = document.querySelector('#menu-btn-tasks')
+    const menuProjectsBtn = document.querySelector('#menu-btn-projects')
 
-  return {
-    menuTasksBtn,
-    menuProjectsBtn,
-  };
+    return {
+        menuTasksBtn,
+        menuProjectsBtn,
+    }
 }
 
 module.exports = {
-  projectsView,
-};
+    projectsView,
+}
