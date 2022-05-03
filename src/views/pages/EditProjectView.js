@@ -1,22 +1,22 @@
-const { viewRender } = require("../../helpers/viewRender");
-const { AddProject } = require("./AddProject");
+const { viewRender } = require('../../helpers/viewRender')
+const { AddProject } = require('./AddProject')
 
 const editProjectView = (project) => {
-  const view = AddProject();
-  viewRender(view);
+    const view = AddProject()
+    viewRender(view)
 
-  const editProjectForm = document.querySelector("#form-store");
-  const titleInput = document.querySelector("#project-title");
-  const descInput = document.querySelector("#project-desc");
+    const editProjectForm = document.querySelector('#form-store')
+    const titleInput = document.querySelector('#project-title')
+    const descInput = document.querySelector('#project-desc')
 
-  titleInput.value = project.title;
-  descInput.value = project.description;
+    titleInput.value = project.title
+    descInput.value = project.description
 
-  return {
-    editProjectForm,
-    titleInput,
-    descInput,
-  };
-};
+    return {
+        editProjectForm,
+        titleInput,
+        descInput,
+    }
+}
 
-module.exports = { editProjectView };
+module.exports = { editProjectView }

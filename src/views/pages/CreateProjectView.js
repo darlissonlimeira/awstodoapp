@@ -1,15 +1,15 @@
-const { viewRender } = require("../../helpers/viewRender");
-const { AddProject } = require("./AddProject");
+const { viewRender } = require('../../helpers/viewRender')
+const { AddProject } = require('./AddProject')
 
 const createProjectView = () => {
-  const view = AddProject();
-  viewRender(view);
+    const view = AddProject()
+    viewRender(view)
 
-  const formEl = document.querySelector("#form-store");
+    const formEl = document.querySelector('#form-store')
 
-  return { formEl };
-};
+    return { formEl }
+}
 
 module.exports = {
-  createProjectView,
-};
+    createProjectView,
+}
